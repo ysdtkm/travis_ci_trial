@@ -3,19 +3,13 @@ language: python
 sudo: required
 
 python:
-  # - "3.3"
   - "3.6"
 
 before_install:
-  - sudo apt-get install gfortran
+  - sudo apt-get install gfortran openmpi-dev libopenmpi-dev libblas-dev liblapack-dev
 
 install:
   - pip install numpy
-
-# addons:
-#   apt:
-#     pachages:
-#     - gfortran
 
 script:
   - cd ${TRAVIS_BUILD_DIR}/submodule_python && python3 test.py
