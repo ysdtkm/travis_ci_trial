@@ -9,7 +9,7 @@ install:
 addons:
   apt:
     pachages:
-      gfortran
+      - gfortran
 
 script:
   - cd ${TRAVIS_BUILD_DIR}/submodule_python && python3 test.py
