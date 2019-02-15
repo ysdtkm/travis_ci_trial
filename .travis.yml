@@ -6,6 +6,11 @@ python:
 install:
   - pip install numpy
 
+addons:
+  apt:
+    pachages:
+      gfortran
+
 script:
   - cd submodule_python && python3 test.py
   - bash test.sh
