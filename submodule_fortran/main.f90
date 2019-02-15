@@ -1,7 +1,7 @@
 program main
   implicit none
   integer :: a(10), n, i
-  n = 11
+  n = 10
   print *, n
   do i = 1, n
     a(i) = i
