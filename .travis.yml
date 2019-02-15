@@ -2,6 +2,8 @@ language: python
 
 dist: xenial
 
+env: MPI=openmpi
+
 sudo: required
 
 python:
