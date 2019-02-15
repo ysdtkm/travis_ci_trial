@@ -12,9 +12,9 @@ addons:
       gfortran
 
 script:
-  - cd submodule_python && python3 test.py
+  - cd ${TRAVIS_BUILD_DIR}/submodule_python && python3 test.py
   - bash test.sh
-  - cd ../submodule_cpp && make
-  - cd ../submodule_fortran && make
+  - cd ${TRAVIS_BUILD_DIR}/submodule_cpp && make
+  - cd ${TRAVIS_BUILD_DIR}/submodule_fortran && make
 
 
