@@ -6,7 +6,7 @@ python:
   - "3.6"
 
 before_install:
-  - sudo apt-get install gfortran openmpi-dev libopenmpi-dev libblas-dev liblapack-dev
+  - sudo apt-get install gfortran libopenmpi-dev libblas-dev liblapack-dev
 
 install:
   - pip install numpy
