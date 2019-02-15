@@ -8,6 +8,7 @@ install:
 
 script:
   - cd submodule_python && python3 test.py
-  - cd submodule_python && bash test.sh
+  - bash test.sh
+  - cd ../submodule_cpp && make
 
 
