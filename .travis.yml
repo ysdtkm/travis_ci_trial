@@ -2,15 +2,13 @@ language: python
 
 dist: xenial
 
-env: MPI=openmpi
-
 sudo: required
 
 python:
   - "3.6"
 
 before_install:
-  - sudo apt-get install gfortran libopenmpi-dev libblas-dev liblapack-dev
+  - sudo apt-get install gfortran openmpi-bin libopenmpi-dev libblas-dev liblapack-dev
 
 install:
   - pip install numpy
