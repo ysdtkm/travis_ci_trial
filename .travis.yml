@@ -1,14 +1,23 @@
 language: python
 
+dist: xenial
+
+sudo: required
+
 python:
   - "3.6"
+
+before_install:
+  - sudo apt-get install gfortran openmpi-bin libopenmpi-dev libblas-dev liblapack-dev
 
 install:
   - pip install numpy
 
 script:
-  - cd submodule_python && python3 test.py
+  - cd ${TRAVIS_BUILD_DIR}/submodule_python && python3 test.py
   - bash test.sh
-  - cd ../submodule_cpp && make
+  - cd ${TRAVIS_BUILD_DIR}/submodule_cpp && make
+  - cd ${TRAVIS_BUILD_DIR}/submodule_fortran && make
+  - cd ${TRAVIS_BUILD_DIR}/submodule_openmpi && make
 
 
