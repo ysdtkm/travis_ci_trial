@@ -10,5 +10,6 @@ script:
   - cd submodule_python && python3 test.py
   - bash test.sh
   - cd ../submodule_cpp && make
+  - cd ../submodule_fortran && make
 
 
