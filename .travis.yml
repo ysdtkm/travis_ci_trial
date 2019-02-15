@@ -23,6 +23,6 @@ script:
   - cd ${TRAVIS_BUILD_DIR}/submodule_openmpi && make
   - ompi_info
   - type mpif90
-  - type mpirun
+  - ls /usr/bin
 
 
