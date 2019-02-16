@@ -11,7 +11,7 @@ else
 endif
 
 debug: $(TARGET)
-	mpiexec --oversubscribe -n 4 ./$< > out
+	mpiexec --oversubscribe -n 20 ./$< > out
 
 $(TARGET): main.f90 Makefile
 	$(FC) $(FFLAGS) $< -o $@
